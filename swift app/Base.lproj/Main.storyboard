@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -30,25 +31,38 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcz-GZ-bsh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-z3-KAA">
-                                <rect key="frame" x="263" y="126" width="75" height="30"/>
-                                <state key="normal" title="Don't Push"/>
-                                <connections>
-                                    <action selector="pushme2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CxS-OQ-AwF"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-AP-UkT">
+                                <rect key="frame" x="251" y="250" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9yv-mP-Q6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egC-Um-hf3">
+                                <rect key="frame" x="251" y="300" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="W2r-3b-bp3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="e9c-z3-KAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XKe-dr-gFQ"/>
+                            <constraint firstItem="3t5-AP-UkT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="250" id="3C0-9e-KCV"/>
                             <constraint firstItem="bVK-CK-CRC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aOy-of-agV"/>
                             <constraint firstItem="qxY-oR-uiQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="auM-XR-m2v"/>
                             <constraint firstItem="qxY-oR-uiQ" firstAttribute="top" secondItem="bVK-CK-CRC" secondAttribute="bottom" constant="100" id="faw-i6-5NK"/>
-                            <constraint firstItem="qxY-oR-uiQ" firstAttribute="top" secondItem="e9c-z3-KAA" secondAttribute="bottom" constant="35" id="q7f-rO-ceb"/>
+                            <constraint firstItem="egC-Um-hf3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hzP-Yp-uJT"/>
+                            <constraint firstItem="egC-Um-hf3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="300" id="miz-dk-tzR"/>
+                            <constraint firstItem="3t5-AP-UkT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pEp-wh-Wq5"/>
                             <constraint firstItem="bVK-CK-CRC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="yu2-5E-eaT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="3t5-AP-UkT" id="N5t-tu-aq6"/>
+                        <outlet property="text2" destination="egC-Um-hf3" id="Aww-Zc-vVc"/>
                         <outlet property="thelabel" destination="bVK-CK-CRC" id="wfz-wc-fh8"/>
                     </connections>
                 </viewController>
